@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QLNS_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQLNS_Service_NhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_NhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_NguoiDung_InputMessage">
+    <wsdl:part name="parameters" element="tns:NguoiDung" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_NguoiDung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NguoiDungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_ktDangNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:ktDangNhap" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_ktDangNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ktDangNhapResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQLNS_Service">
+    <wsdl:operation name="NhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/NhanVien" message="tns:IQLNS_Service_NhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/NhanVienResponse" message="tns:IQLNS_Service_NhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NguoiDung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/NguoiDung" message="tns:IQLNS_Service_NguoiDung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/NguoiDungResponse" message="tns:IQLNS_Service_NguoiDung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ktDangNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/ktDangNhap" message="tns:IQLNS_Service_ktDangNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/ktDangNhapResponse" message="tns:IQLNS_Service_ktDangNhap_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQLNS_Service" type="tns:IQLNS_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NhanVien">
+      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/NhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NguoiDung">
+      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/NguoiDung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ktDangNhap">
+      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/ktDangNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QLNS_Service">
+    <wsdl:port name="BasicHttpBinding_IQLNS_Service" binding="tns:BasicHttpBinding_IQLNS_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/QLNS_Service/QLNS_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

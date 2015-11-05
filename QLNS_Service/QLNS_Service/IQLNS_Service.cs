@@ -15,5 +15,19 @@ namespace QLNS_Service
     {
         [OperationContract]
         DataSet NhanVien();
+        [OperationContract]
+        DataSet NguoiDung();
+        [OperationContract]
+        bool ktDangNhap (string UID, string PWD);
+    }
+    [DataContract]
+    public class LoginInformation
+    {
+        [DataMember]
+        public string UID
+        { get; set; }
+        [DataMember]
+        public string PWD
+        { get; set; }
     }
 }
