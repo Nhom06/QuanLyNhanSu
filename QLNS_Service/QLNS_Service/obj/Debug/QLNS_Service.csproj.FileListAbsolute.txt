@@ -1,6 +1,6 @@
-E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\obj\Debug\QLNS_Service.csprojResolveAssemblyReference.cache
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\bin\Debug\QLNS_Service.dll.config
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\bin\Debug\QLNS_Service.dll
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\bin\Debug\QLNS_Service.pdb
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\obj\Debug\QLNS_Service.dll
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\obj\Debug\QLNS_Service.pdb
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_Service\obj\Debug\QLNS_Service.csprojResolveAssemblyReference.cache

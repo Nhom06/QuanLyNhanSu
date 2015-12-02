@@ -38,7 +38,7 @@ namespace QLNS_Application
             if(result == true)
             {
                 this.Hide();
-                frmMain ss = new frmMain();
+                frmManHinhChinh ss = new frmManHinhChinh();
                 ss.Show();
             }
             else
