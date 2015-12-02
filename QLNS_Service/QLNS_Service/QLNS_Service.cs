@@ -51,20 +51,31 @@ namespace QLNS_Service
                 cmd.Parameters.AddWithValue("@SOBHYT", nv.sobhyt);
                 cmd.Parameters.AddWithValue("@SOTHEATM", nv.sotheatm);
 
-                int result= cmd.ExecuteNonQuery();
-                if(result == 1)
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
                 {
-                    strMessage = nv.manv+ " đã thêm thành công!";
+                    strMessage = nv.manv + " đã thêm thành công!";
                 }
                 else
                 {
-                    strMessage = nv.manv+ " thêm không thành công!";
+                    strMessage = nv.manv + " thêm không thành công!";
                 }
                 conn.Close();
-            }   
+            }
             return strMessage;
         }
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
+        public DataSet Load_TrinhDo()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_TrinhDo", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_TrinhDo(Cls_TrinhDo td)
         {
             string strMessage = string.Empty;
@@ -76,16 +87,61 @@ namespace QLNS_Service
                 cmd.Parameters.AddWithValue("@TENTD", td.tentd);
 
                 int result = cmd.ExecuteNonQuery();
-                if(result == 1)
+                if (result == 1)
                 {
-                    strMessage = td.matd+ " đã thêm thành công!";
+                    strMessage = td.matd + " đã thêm thành công!";
                 }
                 else
                 {
-                    strMessage = td.matd+ " thêm không thành công!";
+                    strMessage = td.matd + " thêm không thành công!";
                 }
                 conn.Close();
-            }   
+            }
+            return strMessage;
+        }
+        public string Update_TrinhDo(Cls_TrinhDo td)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_TrinhDo set TenTD=@TENTD where MaTD=@MATD", conn);
+                cmd.Parameters.AddWithValue("@MATD", td.matd);
+                cmd.Parameters.AddWithValue("@TENTD", td.tentd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = td.matd + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = td.matd + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_TrinhDo(Cls_TrinhDo td)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_TrinhDo where MaTD=@MATD", conn);
+                cmd.Parameters.AddWithValue("@MATD", td.matd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = td.matd + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = td.matd + " delete không thành công!";
+                }
+                conn.Close();
+            }
             return strMessage;
         }
         //-------------------------------------------------------CHI TIẾT TRÌNH ĐỘ-----------------------------------------//
@@ -104,7 +160,7 @@ namespace QLNS_Service
                 cmd.Parameters.AddWithValue("@TRUONG", cttd.truong);
 
                 int result = cmd.ExecuteNonQuery();
-                if(result == 1)
+                if (result == 1)
                 {
                     strMessage = cttd.macttd + " đã thêm thành công!";
                 }
@@ -125,7 +181,7 @@ namespace QLNS_Service
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("insert into Tb_NgoaiNgu (MaNN,TenNN) values(@MANN,@TENNN)", conn);
                 cmd.Parameters.AddWithValue("@MANN", nn.mann);
-                cmd.Parameters.AddWithValue("@TENNN", nn.tennn);;
+                cmd.Parameters.AddWithValue("@TENNN", nn.tennn); ;
 
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
@@ -532,29 +588,22 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------ĐĂNG NHẬP-----------------------------------------//
-        /*public bool ktDangNhap(Check_Login cl)
+        public DataSet ktDangNhap(Check_Login cl)
         {
-            try
+            DataSet ds;
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
             {
-                DataClasses1DataContext login = new DataClasses1DataContext();
-                var message = from t in login.NguoiDungs
-                              where t.TenDN == cl.UID && t.MatKhau == cl.PWD
-                              select t;
-                if(message.Count() > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("select * from Tb_NguoiDung where (TenDN=@TENDN,MatKhau=@MATKHAU)", conn);
+                cmd.Parameters.AddWithValue("@TENDN", cl.tendn);
+                cmd.Parameters.AddWithValue("@MATKHAU", cl.matkhau);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds);
+                conn.Close();
+                return ds;
             }
         }
-         * */
-        //-------------------------------------------------------END ĐĂNG NHẬP-----------------------------------------//
     }
 }

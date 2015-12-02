@@ -9,9 +9,19 @@ namespace QLNS_Service
     [DataContract]
     public class Check_Login
     {
+        string TenDN;
+        string MatKhau;
         [DataMember]
-        public string UID { get; set; }
+        public string tendn 
+        { 
+            get { return TenDN; } 
+            set { TenDN = value; }
+        }
         [DataMember]
-        public string PWD { get; set; }
+        public string matkhau
+        {
+            get { return MatKhau; }
+            set { MatKhau = value; }
+        }
     }
 }

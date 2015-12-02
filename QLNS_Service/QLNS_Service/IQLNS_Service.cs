@@ -20,7 +20,13 @@ namespace QLNS_Service
         string Add_NhanVien(Cls_NhanVien nv);
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
         [OperationContract]
+        DataSet Load_TrinhDo();
+        [OperationContract]
         string Add_TrinhDo(Cls_TrinhDo td);
+        [OperationContract]
+        string Update_TrinhDo(Cls_TrinhDo td);
+        [OperationContract]
+        string Delete_TrinhDo(Cls_TrinhDo td);
         //-------------------------------------------------------CT TRÌNH ĐỘ-----------------------------------------//
         [OperationContract]
         string Add_CTTrinhDo(Cls_CTTrinhDo cttd);
@@ -72,7 +78,8 @@ namespace QLNS_Service
         //-------------------------------------------------------CHUYỂN CÔNG TÁC-----------------------------------------//
         [OperationContract]
         string Add_ChuyenCongTac(Cls_ChuyenCongTac cct);
-        //[OperationContract]
-        /*bool ktDangNhap(Check_Login cl);*/
+        //-------------------------------------------------------ĐĂNG NHẬP-----------------------------------------//
+        [OperationContract]
+        DataSet ktDangNhap(Check_Login cl);
     }
 }
