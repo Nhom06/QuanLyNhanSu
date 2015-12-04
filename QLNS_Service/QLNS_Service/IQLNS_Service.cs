@@ -67,24 +67,6 @@ namespace QLNS_Service
         string Update_PhongBan(Cls_PhongBan pb);
         [OperationContract]
         string Delete_PhongBan(Cls_PhongBan pb);
-        //-------------------------------------------------------TÔN GIÁO-----------------------------------------//
-        [OperationContract]
-        DataSet Load_TonGiao();
-        [OperationContract]
-        string Add_TonGiao(Cls_TonGiao tg);
-        [OperationContract]
-        string Update_TonGiao(Cls_TonGiao tg);
-        [OperationContract]
-        string Delete_TonGiao(Cls_TonGiao tg);
-        //-------------------------------------------------------DÂN TỘC-----------------------------------------//
-        [OperationContract]
-        DataSet Load_DanToc();
-        [OperationContract]
-        string Add_DanToc(Cls_DanToc dt);
-        [OperationContract]
-        string Update_DanToc(Cls_DanToc dt);
-        [OperationContract]
-        string Delete_DanToc(Cls_DanToc dt);
         //-------------------------------------------------------CHỨC VỤ-----------------------------------------//
         [OperationContract]
         DataSet Load_ChucVu();

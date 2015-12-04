@@ -55,7 +55,6 @@
     <Compile Include="Cls_CTKiLuat.cs" />
     <Compile Include="Cls_CTNgoaiNgu.cs" />
     <Compile Include="Cls_CTTrinhDo.cs" />
-    <Compile Include="Cls_DanToc.cs" />
     <Compile Include="Cls_HopDong.cs" />
     <Compile Include="Cls_KhenThuong.cs" />
     <Compile Include="Cls_KiLuat.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="Cls_PhanQuyen.cs" />
     <Compile Include="Cls_PhongBan.cs" />
     <Compile Include="Cls_ThaiSan.cs" />
-    <Compile Include="Cls_TonGiao.cs" />
     <Compile Include="Cls_TrinhDo.cs" />
     <Compile Include="IQLNS_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
