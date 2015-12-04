@@ -872,6 +872,17 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------HỢP ĐỒNG-----------------------------------------//
+        public DataSet Load_HopDong()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_HopDong", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_HopDong(Cls_HopDong hd)
         {
             string strMessage = string.Empty;
@@ -895,7 +906,63 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_HopDong(Cls_HopDong hd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_HopDong set TenHD=@TENHD where MaLoaiHD=@MALOAIHD", conn);
+                cmd.Parameters.AddWithValue("@MALOAIHD", hd.maloaihd);
+                cmd.Parameters.AddWithValue("@TENHD", hd.maloaihd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = hd.maloaihd + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = hd.maloaihd + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_HopDong(Cls_HopDong hd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_HopDong where MaLoaiHD=@MALOAIHD", conn);
+                cmd.Parameters.AddWithValue("@MALOAIHD", hd.maloaihd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = hd.maloaihd + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = hd.maloaihd + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------CHI TIẾT HỢP ĐỒNG-----------------------------------------//
+        public DataSet Load_CTHopDong()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTHopDong", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_CTHopDong(Cls_CTHopDong cthd)
         {
             string strMessage = string.Empty;
@@ -924,7 +991,68 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_CTHopDong(Cls_CTHopDong cthd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_CTHopDong set MaLoaiHD=@MALOAIHD,MaNV=@MANV,NgayBatDau=@NGAYBATDAU,NgayKetThuc=@NGAYKETTHUC,LuongCB=@LUONGCB,MaCV=@MACV where SoHD=@SOHD", conn);
+                cmd.Parameters.AddWithValue("@SOHD", cthd.sohd);
+                cmd.Parameters.AddWithValue("@MALOAIHD", cthd.maloaihd);
+                cmd.Parameters.AddWithValue("@MANV", cthd.manv);
+                cmd.Parameters.AddWithValue("@NGAYBATDAU", cthd.ngaybatdau);
+                cmd.Parameters.AddWithValue("@NGAYKETTHUC", cthd.ngayketthuc);
+                cmd.Parameters.AddWithValue("@LUONGCB", cthd.luongcb);
+                cmd.Parameters.AddWithValue("@MACV", cthd.macv);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = cthd.sohd + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = cthd.sohd + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_CTHopDong(Cls_CTHopDong cthd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_CTHopDong where SoHD=@SOHD", conn);
+                cmd.Parameters.AddWithValue("@SOHD", cthd.sohd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = cthd.sohd + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = cthd.sohd + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------PHÂN QUYỀN-----------------------------------------//
+        public DataSet Load_PhanQuyen()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_PhanQuyen", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_PhanQuyen(Cls_PhanQuyen pq)
         {
             string strMessage = string.Empty;
@@ -948,7 +1076,63 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_PhanQuyen(Cls_PhanQuyen pq)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_PhanQuyen set TenPQ=@TENPQ where MaPQ=@MAPQ", conn);
+                cmd.Parameters.AddWithValue("@MAPQ", pq.mapq);
+                cmd.Parameters.AddWithValue("@TENPQ", pq.tenpq);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = pq.mapq + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = pq.mapq + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_PhanQuyen(Cls_PhanQuyen pq)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_PhanQuyen where MaPQ=@MAPQ", conn);
+                cmd.Parameters.AddWithValue("@MAPQ", pq.mapq);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = pq.mapq + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = pq.mapq + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------NGƯỜI DÙNG-----------------------------------------//
+        public DataSet Load_NguoiDung()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_NguoiDung", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_NguoiDung(Cls_NguoiDung nd)
         {
             string strMessage = string.Empty;
@@ -974,7 +1158,65 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_NguoiDung(Cls_NguoiDung nd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_NguoiDung set MatKhau=@MATKHAU,MaNV=@MANV,MaPQ=@MAPQ where TenDN=@TENDN", conn);
+                cmd.Parameters.AddWithValue("@TENDN", nd.tendn);
+                cmd.Parameters.AddWithValue("@MATKHAU", nd.matkhau);
+                cmd.Parameters.AddWithValue("@MANV", nd.manv);
+                cmd.Parameters.AddWithValue("@MAPQ", nd.mapq);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = nd.tendn + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = nd.tendn + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_NguoiDung(Cls_NguoiDung nd)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_NguoiDung where TenDN=@TENDN", conn);
+                cmd.Parameters.AddWithValue("@TENDN", nd.tendn);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = nd.tendn + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = nd.tendn + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------KĨ LUẬT-----------------------------------------//
+        public DataSet Load_KiLuat()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_KiLuat", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_KiLuat(Cls_KiLuat kl)
         {
             string strMessage = string.Empty;
@@ -998,7 +1240,63 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_KiLuat(Cls_KiLuat kl)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_KiLuat set TenKL=@TENKL where MaKL=@MAKL", conn);
+                cmd.Parameters.AddWithValue("@MAKL", kl.makl);
+                cmd.Parameters.AddWithValue("@TENKL", kl.tenkl);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = kl.makl + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = kl.makl + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_KiLuat(Cls_KiLuat kl)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_KiLuat where MaKL=@MAKL", conn);
+                cmd.Parameters.AddWithValue("@MAKL", kl.makl);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = kl.makl + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = kl.makl + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------CHI TIẾT KĨ LUẬT-----------------------------------------//
+        public DataSet Load_CTKiLuat()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTKiLuat", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_CTKiLuat(Cls_CTKiLuat ctkl)
         {
             string strMessage = string.Empty;
@@ -1026,7 +1324,67 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_CTKiLuat(Cls_CTKiLuat ctkl)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_CTKiLuat set MaKL=@MAKL,MaNV=@MANV,NgayKL=@NGAYKL,HinhThuc=@HINHTHUC,NguyenNhan=@NGUYENNHAN where MaCTKL=@MACTKL", conn);
+                cmd.Parameters.AddWithValue("@MACTKL", ctkl.mactkl);
+                cmd.Parameters.AddWithValue("@MAKL", ctkl.makl);
+                cmd.Parameters.AddWithValue("@MANV", ctkl.manv);
+                cmd.Parameters.AddWithValue("@NGAYKL", ctkl.ngaykl);
+                cmd.Parameters.AddWithValue("@HINHTHUC", ctkl.hinhthuc);
+                cmd.Parameters.AddWithValue("@NGUYENNHAN", ctkl.nguyennhan);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = ctkl.mactkl + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = ctkl.mactkl + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_CTKiLuat(Cls_CTKiLuat ctkl)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_CTKiLuat where MaCTKL=@MACTKL", conn);
+                cmd.Parameters.AddWithValue("@MACTKL", ctkl.mactkl);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = ctkl.mactkl + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = ctkl.mactkl + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------KHEN THƯỞNG-----------------------------------------//
+        public DataSet Load_KhenThuong()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_KhenThuong", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_KhenThuong(Cls_KhenThuong kt)
         {
             string strMessage = string.Empty;
@@ -1051,7 +1409,63 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_KhenThuong(Cls_KhenThuong kt)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_KhenThuong set TenLoai=@TENLOAI where MaLoai=@MALOAI", conn);
+                cmd.Parameters.AddWithValue("@MALOAI", kt.maloai);
+                cmd.Parameters.AddWithValue("@TENLOAI", kt.tenloai);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = kt.maloai + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = kt.maloai + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_KhenThuong(Cls_KhenThuong kt)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_KhenThuong where MaLoai=@MALOAI", conn);
+                cmd.Parameters.AddWithValue("@MALOAI", kt.maloai);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = kt.maloai + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = kt.maloai + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------CHI TIẾT KHEN THƯỞNG-----------------------------------------//
+        public DataSet Load_CTKhenThuong()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTKhenThuong", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_CTKhenThuong(Cls_CTKhenThuong ctkt)
         {
             string strMessage = string.Empty;
@@ -1079,7 +1493,67 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_CTKhenThuong(Cls_CTKhenThuong ctkt)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_CTKhenThuong set MaNV=@MANV,NgayQD=@NGAYQD,MaLoai=@MALOAI,NoiDung=@NOIDUNG,HinhThuc=@HINHTHUC where SoQD=@SOQD", conn);
+                cmd.Parameters.AddWithValue("@SOQD", ctkt.soqd);
+                cmd.Parameters.AddWithValue("@MANV", ctkt.manv);
+                cmd.Parameters.AddWithValue("@NGAYQD", ctkt.ngayqd);
+                cmd.Parameters.AddWithValue("@MALOAI", ctkt.maloai);
+                cmd.Parameters.AddWithValue("@NOIDUNG", ctkt.noidung);
+                cmd.Parameters.AddWithValue("@HINHTHUC", ctkt.hinhthuc);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = ctkt.soqd + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = ctkt.soqd + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_CTKhenThuong(Cls_CTKhenThuong ctkt)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_CTKhenThuong where SoQD=@SOQD", conn);
+                cmd.Parameters.AddWithValue("@SOQD", ctkt.soqd);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = ctkt.soqd + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = ctkt.soqd + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------CHUYỂN CÔNG TÁC-----------------------------------------//
+        public DataSet Load_ChuyenCongTac()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_ChuyenCongTac", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_ChuyenCongTac(Cls_ChuyenCongTac cct)
         {
             string strMessage = string.Empty;
@@ -1108,6 +1582,56 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_ChuyenCongTac(Cls_ChuyenCongTac cct)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_ChuyenCongTac set MaNV=@MANV,NgayChuyen=@NGAYCHUYEN,MaCVCu=@MACVCU,MaPBCu=@MAPBCU,MaCVMoi=@MACMOI,MaPBMoi=@MAPBMOI where MaChuyen=@MACHUYEN", conn);
+                cmd.Parameters.AddWithValue("@MACHUYEN", cct.machuyen);
+                cmd.Parameters.AddWithValue("@MANV", cct.manv);
+                cmd.Parameters.AddWithValue("@NGAYCHUYEN", cct.ngaychuyen);
+                cmd.Parameters.AddWithValue("@MACVCU", cct.macvcu);
+                cmd.Parameters.AddWithValue("@MAPBCU", cct.mapbcu);
+                cmd.Parameters.AddWithValue("@MACVMOI", cct.macvmoi);
+                cmd.Parameters.AddWithValue("@MAPBMOI", cct.mapbmoi);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = cct.machuyen + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = cct.machuyen + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_ChuyenCongTac(Cls_ChuyenCongTac cct)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_ChuyenCongTac where MaChuyen=@MACHUYEN", conn);
+                cmd.Parameters.AddWithValue("@MACHUYEN", cct.machuyen);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = cct.machuyen + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = cct.machuyen + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------ĐĂNG NHẬP-----------------------------------------//
         public DataSet ktDangNhap(Check_Login cl)
         {
@@ -1116,7 +1640,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("select * from Tb_NguoiDung where (TenDN=@TENDN,MatKhau=@MATKHAU)", conn);
+                SqlCommand cmd = new SqlCommand("select * from Tb_NguoiDung where TenDN=@TENDN,MatKhau=@MATKHAU", conn);
                 cmd.Parameters.AddWithValue("@TENDN", cl.tendn);
                 cmd.Parameters.AddWithValue("@MATKHAU", cl.matkhau);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
