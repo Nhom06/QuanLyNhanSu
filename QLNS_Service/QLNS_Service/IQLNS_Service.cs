@@ -60,19 +60,49 @@ namespace QLNS_Service
         string Delete_CTNgoaiNgu(Cls_CTNgoaiNgu ctnn);
         //-------------------------------------------------------PHÒNG BAN-----------------------------------------//
         [OperationContract]
+        DataSet Load_PhongBan();
+        [OperationContract]
         string Add_PhongBan(Cls_PhongBan pb);
+        [OperationContract]
+        string Update_PhongBan(Cls_PhongBan pb);
+        [OperationContract]
+        string Delete_PhongBan(Cls_PhongBan pb);
         //-------------------------------------------------------TÔN GIÁO-----------------------------------------//
         [OperationContract]
+        DataSet Load_TonGiao();
+        [OperationContract]
         string Add_TonGiao(Cls_TonGiao tg);
+        [OperationContract]
+        string Update_TonGiao(Cls_TonGiao tg);
+        [OperationContract]
+        string Delete_TonGiao(Cls_TonGiao tg);
         //-------------------------------------------------------DÂN TỘC-----------------------------------------//
         [OperationContract]
+        DataSet Load_DanToc();
+        [OperationContract]
         string Add_DanToc(Cls_DanToc dt);
+        [OperationContract]
+        string Update_DanToc(Cls_DanToc dt);
+        [OperationContract]
+        string Delete_DanToc(Cls_DanToc dt);
         //-------------------------------------------------------CHỨC VỤ-----------------------------------------//
         [OperationContract]
+        DataSet Load_ChucVu();
+        [OperationContract]
         string Add_ChucVu(Cls_ChucVu cv);
+        [OperationContract]
+        string Update_ChucVu(Cls_ChucVu cv);
+        [OperationContract]
+        string Delete_ChucVu(Cls_ChucVu cv);
         //-------------------------------------------------------THAI SẢN-----------------------------------------//
         [OperationContract]
+        DataSet Load_ThaiSan();
+        [OperationContract]
         string Add_ThaiSan(Cls_ThaiSan ts);
+        [OperationContract]
+        string Update_ThaiSan(Cls_ThaiSan ts);
+        [OperationContract]
+        string Delete_ThaiSan(Cls_ThaiSan ts);
         //-------------------------------------------------------HỢP ĐỒNG-----------------------------------------//
         [OperationContract]
         string Add_HopDong(Cls_HopDong hd);
