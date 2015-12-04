@@ -18,6 +18,10 @@ namespace QLNS_Service
         DataSet Load_NhanVien();
         [OperationContract]
         string Add_NhanVien(Cls_NhanVien nv);
+        [OperationContract]
+        string Update_NhanVien(Cls_NhanVien nv);
+        [OperationContract]
+        string Delete_NhanVien(Cls_NhanVien nv);
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
         [OperationContract]
         DataSet Load_TrinhDo();
@@ -28,6 +32,8 @@ namespace QLNS_Service
         [OperationContract]
         string Delete_TrinhDo(Cls_TrinhDo td);
         //-------------------------------------------------------CT TRÌNH ĐỘ-----------------------------------------//
+        [OperationContract]
+        DataSet Load_CTTrinhDo();
         [OperationContract]
         string Add_CTTrinhDo(Cls_CTTrinhDo cttd);
         //-------------------------------------------------------NGOẠI NGỮ-----------------------------------------//

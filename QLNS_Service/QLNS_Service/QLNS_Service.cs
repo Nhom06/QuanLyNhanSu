@@ -64,6 +64,65 @@ namespace QLNS_Service
             }
             return strMessage;
         }
+        public string Update_NhanVien(Cls_NhanVien nv)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("update Tb_NhanVien set HoTen=@HOTEN,GioiTinh=@GIOITINH,NgaySinh=@NGAYSINH,NoiSinh=@NOISINH,SoCMND=@SOCMND,MaDT=@MADT,MaTG=@MATG,MaPB=@MAPB,MaCV=@MACV,DienThoai=@DIENTHOAI,HoKhau=@HOKHAU,NgayVaoLam=@NGAYVAOLAM,ChoOHienNay=@CHOOHIENNAY,SoBHYT=@SOBHYT,SoTheATM=@SOTHEATM where MaNV=@MANV", conn);
+                cmd.Parameters.AddWithValue("@MANV", nv.manv);
+                cmd.Parameters.AddWithValue("@HOTEN", nv.hoten);
+                cmd.Parameters.AddWithValue("@GIOITINH", nv.gioitinh);
+                cmd.Parameters.AddWithValue("@NGAYSINH", nv.ngaysinh);
+                cmd.Parameters.AddWithValue("@NOISINH", nv.noisinh);
+                cmd.Parameters.AddWithValue("@SOCMND", nv.socmnd);
+                cmd.Parameters.AddWithValue("@MADT", nv.madt);
+                cmd.Parameters.AddWithValue("@MATG", nv.matg);
+                cmd.Parameters.AddWithValue("@MAPB", nv.mapb);
+                cmd.Parameters.AddWithValue("@MACV", nv.macv);
+                cmd.Parameters.AddWithValue("@DIENTHOAI", nv.dienthoai);
+                cmd.Parameters.AddWithValue("@HOKHAU", nv.hokhau);
+                cmd.Parameters.AddWithValue("@NGAYVAOLAM", nv.ngayvaolam);
+                cmd.Parameters.AddWithValue("@CHOOHIENNAY", nv.choohiennay);
+                cmd.Parameters.AddWithValue("@SOBHYT", nv.sobhyt);
+                cmd.Parameters.AddWithValue("@SOTHEATM", nv.sotheatm);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = nv.manv + " đã update thành công!";
+                }
+                else
+                {
+                    strMessage = nv.manv + " update không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
+        public string Delete_NhanVien(Cls_NhanVien nv)
+        {
+            string strMessage = string.Empty;
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete Tb_NhanVien where MaNV=@MANV", conn);
+                cmd.Parameters.AddWithValue("@MANV", nv.manv);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    strMessage = nv.manv + " đã delete thành công!";
+                }
+                else
+                {
+                    strMessage = nv.manv + " delete không thành công!";
+                }
+                conn.Close();
+            }
+            return strMessage;
+        }
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
         public DataSet Load_TrinhDo()
         {
@@ -145,6 +204,17 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------CHI TIẾT TRÌNH ĐỘ-----------------------------------------//
+        public DataSet Load_CTTrinhDo()
+        {
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTTrinhDo", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+        }
         public string Add_CTTrinhDo(Cls_CTTrinhDo cttd)
         {
             string strMessage = string.Empty;
