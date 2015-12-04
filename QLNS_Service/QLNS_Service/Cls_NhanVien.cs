@@ -13,7 +13,7 @@ namespace QLNS_Service
         string MaNV;
         string HoTen;
         string GioiTinh;
-        DateTime NgaySinh;
+        string NgaySinh;
         string NoiSinh;
         string SoCMND;
         string MaTG;
@@ -22,7 +22,7 @@ namespace QLNS_Service
         string MaCV;
         string DienThoai;
         string HoKhau;
-        DateTime NgayVaoLam;
+        string NgayVaoLam;
         string ChoOHienNay;
         string SoBHYT;
         string SoTheATM;
@@ -45,7 +45,7 @@ namespace QLNS_Service
             set { GioiTinh = value; }
         }
         [DataMember]
-        public DateTime ngaysinh 
+        public string ngaysinh 
         {
             get { return NgaySinh; }
             set { NgaySinh = value; }
@@ -99,7 +99,7 @@ namespace QLNS_Service
             set { HoKhau = value; } 
         }
         [DataMember]
-        public DateTime ngayvaolam 
+        public string ngayvaolam 
         {
             get { return NgayVaoLam; }
             set { NgayVaoLam = value; } 

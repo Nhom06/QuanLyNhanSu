@@ -22,9 +22,9 @@ namespace QLNS_Service
             {
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("select * from Tb_NhanVien", conn);
-                DataSet dsNhanVien = new DataSet();
-                da.Fill(dsNhanVien);
-                return dsNhanVien;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
             }
         }
         public string Add_NhanVien(Cls_NhanVien nv)

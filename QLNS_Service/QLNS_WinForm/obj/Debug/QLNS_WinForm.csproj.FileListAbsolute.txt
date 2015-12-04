@@ -1,0 +1,9 @@
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\bin\Debug\QLNS_WinForm.exe.config
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\bin\Debug\QLNS_WinForm.exe
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\bin\Debug\QLNS_WinForm.pdb
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.frmNhanVien.resources
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.Properties.Resources.resources
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.csproj.GenerateResource.Cache
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.exe
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.pdb
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.csprojResolveAssemblyReference.cache
