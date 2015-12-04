@@ -36,12 +36,28 @@ namespace QLNS_Service
         DataSet Load_CTTrinhDo();
         [OperationContract]
         string Add_CTTrinhDo(Cls_CTTrinhDo cttd);
+        [OperationContract]
+        string Update_CTTrinhDo(Cls_CTTrinhDo cttd);
+        [OperationContract]
+        string Delete_CTTrinhDo(Cls_CTTrinhDo cttd);
         //-------------------------------------------------------NGOẠI NGỮ-----------------------------------------//
         [OperationContract]
+        DataSet Load_NgoaiNgu();
+        [OperationContract]
         string Add_NgoaiNgu(Cls_NgoaiNgu nn);
+        [OperationContract]
+        string Update_NgoaiNgu(Cls_NgoaiNgu nn);
+        [OperationContract]
+        string Delete_NgoaiNgu(Cls_NgoaiNgu nn);
         //-------------------------------------------------------CHI TIẾT NGOẠI NGỮ-----------------------------------------//
         [OperationContract]
+        DataSet Load_CTNgoaiNgu();
+        [OperationContract]
         string Add_CTNgoaiNgu(Cls_CTNgoaiNgu ctnn);
+        [OperationContract]
+        string Update_CTNgoaiNgu(Cls_CTNgoaiNgu ctnn);
+        [OperationContract]
+        string Delete_CTNgoaiNgu(Cls_CTNgoaiNgu ctnn);
         //-------------------------------------------------------PHÒNG BAN-----------------------------------------//
         [OperationContract]
         string Add_PhongBan(Cls_PhongBan pb);
