@@ -33,15 +33,15 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into Tb_NhanVien (MaNV,HoTen,GioiTinh,NgaySinh,SoCMND,NoiSinh,MaTG,MaDT,MaPB,MaCV,DienThoai,HoKhau,NgayVaoLam,ChoOHienNay,SoBHYT,SoTheATM) values(@MANV,@HOTEN,@GIOITINH,@NGAYSINH,@SOCMND,@NOISINH,@MATG,@MADT,@MAPB,@MACV,@DIENTHOAI,@HOKHAU,@NGAYVAOLAM,@CHOOHIENNAY,@SOBHYT,@SOTHEATM)", conn);
+                SqlCommand cmd = new SqlCommand("insert into Tb_NhanVien (MaNV,HoTen,GioiTinh,NgaySinh,SoCMND,NoiSinh,TonGiao,DanToc,MaPB,MaCV,DienThoai,HoKhau,NgayVaoLam,ChoOHienNay,SoBHYT,SoTheATM) values(@MANV,@HOTEN,@GIOITINH,@NGAYSINH,@SOCMND,@NOISINH,@TONGIAO,@DANTOC,@MAPB,@MACV,@DIENTHOAI,@HOKHAU,@NGAYVAOLAM,@CHOOHIENNAY,@SOBHYT,@SOTHEATM)", conn);
                 cmd.Parameters.AddWithValue("@MANV", nv.manv);
                 cmd.Parameters.AddWithValue("@HOTEN", nv.hoten);
                 cmd.Parameters.AddWithValue("@GIOITINH", nv.gioitinh);
                 cmd.Parameters.AddWithValue("@NGAYSINH", nv.ngaysinh);
                 cmd.Parameters.AddWithValue("@NOISINH", nv.noisinh);
                 cmd.Parameters.AddWithValue("@SOCMND", nv.socmnd);
-                cmd.Parameters.AddWithValue("@MADT", nv.madt);
-                cmd.Parameters.AddWithValue("@MATG", nv.matg);
+                cmd.Parameters.AddWithValue("@DANTOC", nv.dantoc);
+                cmd.Parameters.AddWithValue("@TONGIAO", nv.tongiao);
                 cmd.Parameters.AddWithValue("@MAPB", nv.mapb);
                 cmd.Parameters.AddWithValue("@MACV", nv.macv);
                 cmd.Parameters.AddWithValue("@DIENTHOAI", nv.dienthoai);
@@ -70,15 +70,15 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("update Tb_NhanVien set HoTen=@HOTEN,GioiTinh=@GIOITINH,NgaySinh=@NGAYSINH,NoiSinh=@NOISINH,SoCMND=@SOCMND,MaDT=@MADT,MaTG=@MATG,MaPB=@MAPB,MaCV=@MACV,DienThoai=@DIENTHOAI,HoKhau=@HOKHAU,NgayVaoLam=@NGAYVAOLAM,ChoOHienNay=@CHOOHIENNAY,SoBHYT=@SOBHYT,SoTheATM=@SOTHEATM where MaNV=@MANV", conn);
+                SqlCommand cmd = new SqlCommand("update Tb_NhanVien set HoTen=@HOTEN,GioiTinh=@GIOITINH,NgaySinh=@NGAYSINH,NoiSinh=@NOISINH,SoCMND=@SOCMND,TonGiao=@TONGIAO,DanToc=@DANTOC,MaPB=@MAPB,MaCV=@MACV,DienThoai=@DIENTHOAI,HoKhau=@HOKHAU,NgayVaoLam=@NGAYVAOLAM,ChoOHienNay=@CHOOHIENNAY,SoBHYT=@SOBHYT,SoTheATM=@SOTHEATM where MaNV=@MANV", conn);
                 cmd.Parameters.AddWithValue("@MANV", nv.manv);
                 cmd.Parameters.AddWithValue("@HOTEN", nv.hoten);
                 cmd.Parameters.AddWithValue("@GIOITINH", nv.gioitinh);
                 cmd.Parameters.AddWithValue("@NGAYSINH", nv.ngaysinh);
                 cmd.Parameters.AddWithValue("@NOISINH", nv.noisinh);
                 cmd.Parameters.AddWithValue("@SOCMND", nv.socmnd);
-                cmd.Parameters.AddWithValue("@MADT", nv.madt);
-                cmd.Parameters.AddWithValue("@MATG", nv.matg);
+                cmd.Parameters.AddWithValue("@DANTOC", nv.dantoc);
+                cmd.Parameters.AddWithValue("@TONGIAO", nv.tongiao);
                 cmd.Parameters.AddWithValue("@MAPB", nv.mapb);
                 cmd.Parameters.AddWithValue("@MACV", nv.macv);
                 cmd.Parameters.AddWithValue("@DIENTHOAI", nv.dienthoai);

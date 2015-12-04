@@ -16,8 +16,8 @@ namespace QLNS_Service
         string NgaySinh;
         string NoiSinh;
         string SoCMND;
-        string MaTG;
-        string MaDT;
+        string TonGiao;
+        string DanToc;
         string MaPB;
         string MaCV;
         string DienThoai;
@@ -63,16 +63,16 @@ namespace QLNS_Service
             set { SoCMND = value; }
         }
         [DataMember]
-        public string matg 
+        public string tongiao 
         {
-            get { return MaTG; }
-            set { MaTG = value; } 
+            get { return TonGiao; }
+            set { TonGiao = value; } 
         }
         [DataMember]
-        public string madt 
+        public string dantoc 
         {
-            get { return MaDT; }
-            set { MaDT = value; } 
+            get { return DanToc; }
+            set { DanToc = value; } 
         }
         [DataMember]
         public string mapb
