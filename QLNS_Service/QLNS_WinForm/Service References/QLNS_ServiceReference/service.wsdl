@@ -152,54 +152,6 @@
   <wsdl:message name="IQLNS_Service_Delete_PhongBan_OutputMessage">
     <wsdl:part name="parameters" element="tns:Delete_PhongBanResponse" />
   </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Load_TonGiao_InputMessage">
-    <wsdl:part name="parameters" element="tns:Load_TonGiao" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Load_TonGiao_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Load_TonGiaoResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Add_TonGiao_InputMessage">
-    <wsdl:part name="parameters" element="tns:Add_TonGiao" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Add_TonGiao_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Add_TonGiaoResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Update_TonGiao_InputMessage">
-    <wsdl:part name="parameters" element="tns:Update_TonGiao" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Update_TonGiao_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Update_TonGiaoResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Delete_TonGiao_InputMessage">
-    <wsdl:part name="parameters" element="tns:Delete_TonGiao" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Delete_TonGiao_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Delete_TonGiaoResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Load_DanToc_InputMessage">
-    <wsdl:part name="parameters" element="tns:Load_DanToc" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Load_DanToc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Load_DanTocResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Add_DanToc_InputMessage">
-    <wsdl:part name="parameters" element="tns:Add_DanToc" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Add_DanToc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Add_DanTocResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Update_DanToc_InputMessage">
-    <wsdl:part name="parameters" element="tns:Update_DanToc" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Update_DanToc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Update_DanTocResponse" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Delete_DanToc_InputMessage">
-    <wsdl:part name="parameters" element="tns:Delete_DanToc" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_Delete_DanToc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Delete_DanTocResponse" />
-  </wsdl:message>
   <wsdl:message name="IQLNS_Service_Load_ChucVu_InputMessage">
     <wsdl:part name="parameters" element="tns:Load_ChucVu" />
   </wsdl:message>
@@ -566,38 +518,6 @@
     <wsdl:operation name="Delete_PhongBan">
       <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_PhongBan" message="tns:IQLNS_Service_Delete_PhongBan_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_PhongBanResponse" message="tns:IQLNS_Service_Delete_PhongBan_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Load_TonGiao">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Load_TonGiao" message="tns:IQLNS_Service_Load_TonGiao_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Load_TonGiaoResponse" message="tns:IQLNS_Service_Load_TonGiao_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Add_TonGiao">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Add_TonGiao" message="tns:IQLNS_Service_Add_TonGiao_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Add_TonGiaoResponse" message="tns:IQLNS_Service_Add_TonGiao_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Update_TonGiao">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Update_TonGiao" message="tns:IQLNS_Service_Update_TonGiao_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Update_TonGiaoResponse" message="tns:IQLNS_Service_Update_TonGiao_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Delete_TonGiao">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_TonGiao" message="tns:IQLNS_Service_Delete_TonGiao_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_TonGiaoResponse" message="tns:IQLNS_Service_Delete_TonGiao_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Load_DanToc">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Load_DanToc" message="tns:IQLNS_Service_Load_DanToc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Load_DanTocResponse" message="tns:IQLNS_Service_Load_DanToc_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Add_DanToc">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Add_DanToc" message="tns:IQLNS_Service_Add_DanToc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Add_DanTocResponse" message="tns:IQLNS_Service_Add_DanToc_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Update_DanToc">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Update_DanToc" message="tns:IQLNS_Service_Update_DanToc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Update_DanTocResponse" message="tns:IQLNS_Service_Update_DanToc_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Delete_DanToc">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_DanToc" message="tns:IQLNS_Service_Delete_DanToc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_DanTocResponse" message="tns:IQLNS_Service_Delete_DanToc_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Load_ChucVu">
       <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Load_ChucVu" message="tns:IQLNS_Service_Load_ChucVu_InputMessage" />
@@ -991,78 +911,6 @@
     </wsdl:operation>
     <wsdl:operation name="Delete_PhongBan">
       <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Delete_PhongBan" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Load_TonGiao">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Load_TonGiao" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Add_TonGiao">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Add_TonGiao" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Update_TonGiao">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Update_TonGiao" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Delete_TonGiao">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Delete_TonGiao" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Load_DanToc">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Load_DanToc" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Add_DanToc">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Add_DanToc" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Update_DanToc">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Update_DanToc" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Delete_DanToc">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Delete_DanToc" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

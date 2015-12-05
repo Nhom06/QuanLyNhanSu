@@ -397,138 +397,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Load_TonGiao">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Load_TonGiaoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Load_TonGiaoResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Add_TonGiao">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="tg" nillable="true" type="q19:Cls_TonGiao" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Add_TonGiaoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Add_TonGiaoResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update_TonGiao">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="tg" nillable="true" type="q20:Cls_TonGiao" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update_TonGiaoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Update_TonGiaoResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Delete_TonGiao">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="tg" nillable="true" type="q21:Cls_TonGiao" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Delete_TonGiaoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Delete_TonGiaoResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Load_DanToc">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Load_DanTocResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Load_DanTocResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Add_DanToc">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="dt" nillable="true" type="q22:Cls_DanToc" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Add_DanTocResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Add_DanTocResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update_DanToc">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="dt" nillable="true" type="q23:Cls_DanToc" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update_DanTocResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Update_DanTocResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Delete_DanToc">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="dt" nillable="true" type="q24:Cls_DanToc" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Delete_DanTocResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Delete_DanTocResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Load_ChucVu">
     <xs:complexType>
       <xs:sequence />
@@ -556,7 +424,7 @@
   <xs:element name="Add_ChucVu">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q25:Cls_ChucVu" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q19:Cls_ChucVu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -570,7 +438,7 @@
   <xs:element name="Update_ChucVu">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q26:Cls_ChucVu" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q20:Cls_ChucVu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -584,7 +452,7 @@
   <xs:element name="Delete_ChucVu">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q27:Cls_ChucVu" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cv" nillable="true" type="q21:Cls_ChucVu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -622,7 +490,7 @@
   <xs:element name="Add_ThaiSan">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q28:Cls_ThaiSan" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q22:Cls_ThaiSan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -636,7 +504,7 @@
   <xs:element name="Update_ThaiSan">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q29:Cls_ThaiSan" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q23:Cls_ThaiSan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -650,7 +518,7 @@
   <xs:element name="Delete_ThaiSan">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q30:Cls_ThaiSan" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ts" nillable="true" type="q24:Cls_ThaiSan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -688,7 +556,7 @@
   <xs:element name="Add_HopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q31:Cls_HopDong" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q25:Cls_HopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -702,7 +570,7 @@
   <xs:element name="Update_HopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q32:Cls_HopDong" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q26:Cls_HopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -716,7 +584,7 @@
   <xs:element name="Delete_HopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q33:Cls_HopDong" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="hd" nillable="true" type="q27:Cls_HopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -754,7 +622,7 @@
   <xs:element name="Add_CTHopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q34:Cls_CTHopDong" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q28:Cls_CTHopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -768,7 +636,7 @@
   <xs:element name="Update_CTHopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q35:Cls_CTHopDong" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q29:Cls_CTHopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -782,7 +650,7 @@
   <xs:element name="Delete_CTHopDong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q36:Cls_CTHopDong" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cthd" nillable="true" type="q30:Cls_CTHopDong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -820,7 +688,7 @@
   <xs:element name="Add_PhanQuyen">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q37:Cls_PhanQuyen" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q31:Cls_PhanQuyen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -834,7 +702,7 @@
   <xs:element name="Update_PhanQuyen">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q38:Cls_PhanQuyen" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q32:Cls_PhanQuyen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -848,7 +716,7 @@
   <xs:element name="Delete_PhanQuyen">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q39:Cls_PhanQuyen" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="pq" nillable="true" type="q33:Cls_PhanQuyen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -886,7 +754,7 @@
   <xs:element name="Add_NguoiDung">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q40:Cls_NguoiDung" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q34:Cls_NguoiDung" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -900,7 +768,7 @@
   <xs:element name="Update_NguoiDung">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q41:Cls_NguoiDung" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q35:Cls_NguoiDung" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -914,7 +782,7 @@
   <xs:element name="Delete_NguoiDung">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q42:Cls_NguoiDung" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="nd" nillable="true" type="q36:Cls_NguoiDung" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -952,7 +820,7 @@
   <xs:element name="Add_KiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q43:Cls_KiLuat" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q37:Cls_KiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -966,7 +834,7 @@
   <xs:element name="Update_KiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q44:Cls_KiLuat" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q38:Cls_KiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -980,7 +848,7 @@
   <xs:element name="Delete_KiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q45:Cls_KiLuat" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kl" nillable="true" type="q39:Cls_KiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1018,7 +886,7 @@
   <xs:element name="Add_CTKiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q46:Cls_CTKiLuat" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q40:Cls_CTKiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1032,7 +900,7 @@
   <xs:element name="Update_CTKiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q47:Cls_CTKiLuat" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q41:Cls_CTKiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1046,7 +914,7 @@
   <xs:element name="Delete_CTKiLuat">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q48:Cls_CTKiLuat" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkl" nillable="true" type="q42:Cls_CTKiLuat" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1084,7 +952,7 @@
   <xs:element name="Add_KhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q49:Cls_KhenThuong" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q43:Cls_KhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1098,7 +966,7 @@
   <xs:element name="Update_KhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q50:Cls_KhenThuong" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q44:Cls_KhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1112,7 +980,7 @@
   <xs:element name="Delete_KhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q51:Cls_KhenThuong" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="kt" nillable="true" type="q45:Cls_KhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1150,7 +1018,7 @@
   <xs:element name="Add_CTKhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q52:Cls_CTKhenThuong" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q46:Cls_CTKhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1164,7 +1032,7 @@
   <xs:element name="Update_CTKhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q53:Cls_CTKhenThuong" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q47:Cls_CTKhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1178,7 +1046,7 @@
   <xs:element name="Delete_CTKhenThuong">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q54:Cls_CTKhenThuong" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="ctkt" nillable="true" type="q48:Cls_CTKhenThuong" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1216,7 +1084,7 @@
   <xs:element name="Add_ChuyenCongTac">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q55:Cls_ChuyenCongTac" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q49:Cls_ChuyenCongTac" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1230,7 +1098,7 @@
   <xs:element name="Update_ChuyenCongTac">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q56:Cls_ChuyenCongTac" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q50:Cls_ChuyenCongTac" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1244,7 +1112,7 @@
   <xs:element name="Delete_ChuyenCongTac">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q57:Cls_ChuyenCongTac" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cct" nillable="true" type="q51:Cls_ChuyenCongTac" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1258,7 +1126,7 @@
   <xs:element name="ktDangNhap">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cl" nillable="true" type="q58:Check_Login" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cl" nillable="true" type="q52:Check_Login" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

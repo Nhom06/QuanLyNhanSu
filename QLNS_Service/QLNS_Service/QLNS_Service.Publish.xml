@@ -1,0 +1,16 @@
+<publishData>
+  <publishTarget publishUrl="C:\Users\Mr-Rua\Desktop\QLNS\">
+    <file relUrl="bin/QLNS_Service.dll.config" publishTime="12/05/2015 10:49:17" />
+    <file relUrl="Web.config" publishTime="12/05/2015 10:49:17" />
+    <file relUrl="bin/QLNS_Service.pdb" publishTime="12/05/2015 11:08:03" />
+    <file relUrl="QLNS_Service.QLNS_Service.svc" publishTime="12/05/2015 11:08:09" />
+    <file relUrl="bin/QLNS_Service.dll" publishTime="12/05/2015 11:08:03" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\Users\Mr-Rua\Desktop\">
+    <file relUrl="QLNS_Service.QLNS_Service.svc" publishTime="12/05/2015 10:41:11" />
+    <file relUrl="bin/QLNS_Service.dll.config" publishTime="12/04/2015 18:47:40" />
+    <file relUrl="bin/QLNS_Service.pdb" publishTime="12/04/2015 23:36:34" />
+    <file relUrl="bin/QLNS_Service.dll" publishTime="12/04/2015 23:36:34" />
+    <file relUrl="Web.config" publishTime="12/04/2015 18:47:40" />
+  </publishTarget>
+</publishData>

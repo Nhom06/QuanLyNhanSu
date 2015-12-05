@@ -26,6 +26,9 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         private string choohiennayField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dantocField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string dienthoaiField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -41,16 +44,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         private string macvField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string madtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string manvField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string mapbField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string matgField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ngaysinhField;
@@ -69,6 +66,9 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string sotheatmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tongiaoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -89,6 +89,19 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
                 if ((object.ReferenceEquals(this.choohiennayField, value) != true)) {
                     this.choohiennayField = value;
                     this.RaisePropertyChanged("choohiennay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dantoc {
+            get {
+                return this.dantocField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dantocField, value) != true)) {
+                    this.dantocField = value;
+                    this.RaisePropertyChanged("dantoc");
                 }
             }
         }
@@ -159,19 +172,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string madt {
-            get {
-                return this.madtField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.madtField, value) != true)) {
-                    this.madtField = value;
-                    this.RaisePropertyChanged("madt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string manv {
             get {
                 return this.manvField;
@@ -193,19 +193,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
                 if ((object.ReferenceEquals(this.mapbField, value) != true)) {
                     this.mapbField = value;
                     this.RaisePropertyChanged("mapb");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string matg {
-            get {
-                return this.matgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.matgField, value) != true)) {
-                    this.matgField = value;
-                    this.RaisePropertyChanged("matg");
                 }
             }
         }
@@ -284,6 +271,19 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
                 if ((object.ReferenceEquals(this.sotheatmField, value) != true)) {
                     this.sotheatmField = value;
                     this.RaisePropertyChanged("sotheatm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tongiao {
+            get {
+                return this.tongiaoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tongiaoField, value) != true)) {
+                    this.tongiaoField = value;
+                    this.RaisePropertyChanged("tongiao");
                 }
             }
         }
@@ -749,128 +749,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
                 if ((object.ReferenceEquals(this.tenpbField, value) != true)) {
                     this.tenpbField = value;
                     this.RaisePropertyChanged("tenpb");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Cls_TonGiao", Namespace="http://schemas.datacontract.org/2004/07/QLNS_Service")]
-    [System.SerializableAttribute()]
-    public partial class Cls_TonGiao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string matgField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tentgField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string matg {
-            get {
-                return this.matgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.matgField, value) != true)) {
-                    this.matgField = value;
-                    this.RaisePropertyChanged("matg");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tentg {
-            get {
-                return this.tentgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tentgField, value) != true)) {
-                    this.tentgField = value;
-                    this.RaisePropertyChanged("tentg");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Cls_DanToc", Namespace="http://schemas.datacontract.org/2004/07/QLNS_Service")]
-    [System.SerializableAttribute()]
-    public partial class Cls_DanToc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string madtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tendtField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string madt {
-            get {
-                return this.madtField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.madtField, value) != true)) {
-                    this.madtField = value;
-                    this.RaisePropertyChanged("madt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tendt {
-            get {
-                return this.tendtField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tendtField, value) != true)) {
-                    this.tendtField = value;
-                    this.RaisePropertyChanged("tendt");
                 }
             }
         }
@@ -2149,54 +2027,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_PhongBan", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_PhongBanResponse")]
         System.Threading.Tasks.Task<string> Delete_PhongBanAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_PhongBan pb);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Load_TonGiaoResponse")]
-        System.Data.DataSet Load_TonGiao();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Load_TonGiaoResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_TonGiaoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Add_TonGiaoResponse")]
-        string Add_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Add_TonGiaoResponse")]
-        System.Threading.Tasks.Task<string> Add_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Update_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Update_TonGiaoResponse")]
-        string Update_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Update_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Update_TonGiaoResponse")]
-        System.Threading.Tasks.Task<string> Update_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_TonGiaoResponse")]
-        string Delete_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_TonGiao", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_TonGiaoResponse")]
-        System.Threading.Tasks.Task<string> Delete_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Load_DanTocResponse")]
-        System.Data.DataSet Load_DanToc();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Load_DanTocResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_DanTocAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Add_DanTocResponse")]
-        string Add_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Add_DanTocResponse")]
-        System.Threading.Tasks.Task<string> Add_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Update_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Update_DanTocResponse")]
-        string Update_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Update_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Update_DanTocResponse")]
-        System.Threading.Tasks.Task<string> Update_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_DanTocResponse")]
-        string Delete_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_DanToc", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_DanTocResponse")]
-        System.Threading.Tasks.Task<string> Delete_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_ChucVu", ReplyAction="http://tempuri.org/IQLNS_Service/Load_ChucVuResponse")]
         System.Data.DataSet Load_ChucVu();
         
@@ -2685,70 +2515,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         
         public System.Threading.Tasks.Task<string> Delete_PhongBanAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_PhongBan pb) {
             return base.Channel.Delete_PhongBanAsync(pb);
-        }
-        
-        public System.Data.DataSet Load_TonGiao() {
-            return base.Channel.Load_TonGiao();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_TonGiaoAsync() {
-            return base.Channel.Load_TonGiaoAsync();
-        }
-        
-        public string Add_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Add_TonGiao(tg);
-        }
-        
-        public System.Threading.Tasks.Task<string> Add_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Add_TonGiaoAsync(tg);
-        }
-        
-        public string Update_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Update_TonGiao(tg);
-        }
-        
-        public System.Threading.Tasks.Task<string> Update_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Update_TonGiaoAsync(tg);
-        }
-        
-        public string Delete_TonGiao(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Delete_TonGiao(tg);
-        }
-        
-        public System.Threading.Tasks.Task<string> Delete_TonGiaoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TonGiao tg) {
-            return base.Channel.Delete_TonGiaoAsync(tg);
-        }
-        
-        public System.Data.DataSet Load_DanToc() {
-            return base.Channel.Load_DanToc();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_DanTocAsync() {
-            return base.Channel.Load_DanTocAsync();
-        }
-        
-        public string Add_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Add_DanToc(dt);
-        }
-        
-        public System.Threading.Tasks.Task<string> Add_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Add_DanTocAsync(dt);
-        }
-        
-        public string Update_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Update_DanToc(dt);
-        }
-        
-        public System.Threading.Tasks.Task<string> Update_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Update_DanTocAsync(dt);
-        }
-        
-        public string Delete_DanToc(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Delete_DanToc(dt);
-        }
-        
-        public System.Threading.Tasks.Task<string> Delete_DanTocAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_DanToc dt) {
-            return base.Channel.Delete_DanTocAsync(dt);
         }
         
         public System.Data.DataSet Load_ChucVu() {

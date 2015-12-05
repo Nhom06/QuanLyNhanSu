@@ -3,21 +3,21 @@
   <xs:complexType name="Cls_NhanVien">
     <xs:sequence>
       <xs:element minOccurs="0" name="choohiennay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dantoc" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="dienthoai" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="gioitinh" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="hokhau" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="macv" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="madt" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="mapb" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="matg" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ngaysinh" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ngayvaolam" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="noisinh" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="sobhyt" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="socmnd" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="sotheatm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tongiao" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cls_NhanVien" nillable="true" type="tns:Cls_NhanVien" />
@@ -66,20 +66,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cls_PhongBan" nillable="true" type="tns:Cls_PhongBan" />
-  <xs:complexType name="Cls_TonGiao">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="matg" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tentg" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Cls_TonGiao" nillable="true" type="tns:Cls_TonGiao" />
-  <xs:complexType name="Cls_DanToc">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="madt" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tendt" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Cls_DanToc" nillable="true" type="tns:Cls_DanToc" />
   <xs:complexType name="Cls_ChucVu">
     <xs:sequence>
       <xs:element minOccurs="0" name="luongcb" type="xs:float" />
