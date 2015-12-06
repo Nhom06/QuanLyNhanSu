@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 
 namespace QLNS_Service

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QLNS_Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QLNS_Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Cls_NhanVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="choohiennay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dantoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dienthoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gioitinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hokhau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="macv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mapb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaysinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngayvaolam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="noisinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sobhyt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="socmnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sotheatm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tongiao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_NhanVien" nillable="true" type="tns:Cls_NhanVien" />
+  <xs:complexType name="Cls_TrinhDo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tentd" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_TrinhDo" nillable="true" type="tns:Cls_TrinhDo" />
+  <xs:complexType name="Cls_CTTrinhDo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chuyenmon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="macttd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaycap" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="truong" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_CTTrinhDo" nillable="true" type="tns:Cls_CTTrinhDo" />
+  <xs:complexType name="Cls_NgoaiNgu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mann" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tennn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_NgoaiNgu" nillable="true" type="tns:Cls_NgoaiNgu" />
+  <xs:complexType name="Cls_CTNgoaiNgu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mactnn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mann" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaycap" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="noicap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="trinhdo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_CTNgoaiNgu" nillable="true" type="tns:Cls_CTNgoaiNgu" />
+  <xs:complexType name="Cls_PhongBan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dienthoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mapb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenpb" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_PhongBan" nillable="true" type="tns:Cls_PhongBan" />
+  <xs:complexType name="Cls_ChucVu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="luongcb" type="xs:float" />
+      <xs:element minOccurs="0" name="macv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tencv" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_ChucVu" nillable="true" type="tns:Cls_ChucVu" />
+  <xs:complexType name="Cls_ThaiSan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mats" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaynghisinh" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ngaytrolai" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="trocapcongty" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_ThaiSan" nillable="true" type="tns:Cls_ThaiSan" />
+  <xs:complexType name="Cls_HopDong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maloaihd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenhd" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_HopDong" nillable="true" type="tns:Cls_HopDong" />
+  <xs:complexType name="Cls_CTHopDong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="luongcb" type="xs:float" />
+      <xs:element minOccurs="0" name="macv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maloaihd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaybatdau" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ngayketthuc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sohd" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_CTHopDong" nillable="true" type="tns:Cls_CTHopDong" />
+  <xs:complexType name="Cls_PhanQuyen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mapq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenpq" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_PhanQuyen" nillable="true" type="tns:Cls_PhanQuyen" />
+  <xs:complexType name="Cls_NguoiDung">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mapq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matkhau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tendn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_NguoiDung" nillable="true" type="tns:Cls_NguoiDung" />
+  <xs:complexType name="Cls_KiLuat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="makl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenkl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_KiLuat" nillable="true" type="tns:Cls_KiLuat" />
+  <xs:complexType name="Cls_CTKiLuat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hinhthuc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mactkl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="makl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaykl" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nguyennhan" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_CTKiLuat" nillable="true" type="tns:Cls_CTKiLuat" />
+  <xs:complexType name="Cls_KhenThuong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenloai" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_KhenThuong" nillable="true" type="tns:Cls_KhenThuong" />
+  <xs:complexType name="Cls_CTKhenThuong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hinhthuc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maloai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngayqd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="noidung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="soqd" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_CTKhenThuong" nillable="true" type="tns:Cls_CTKhenThuong" />
+  <xs:complexType name="Cls_ChuyenCongTac">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="machuyen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="macvcu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="macvmoi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mapbcu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mapbmoi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaychuyen" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cls_ChuyenCongTac" nillable="true" type="tns:Cls_ChuyenCongTac" />
+  <xs:complexType name="Check_Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matkhau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tendn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Check_Login" nillable="true" type="tns:Check_Login" />
+</xs:schema>
