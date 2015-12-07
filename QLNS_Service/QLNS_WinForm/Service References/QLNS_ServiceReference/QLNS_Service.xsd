@@ -167,11 +167,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cls_ChuyenCongTac" nillable="true" type="tns:Cls_ChuyenCongTac" />
-  <xs:complexType name="Check_Login">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="matkhau" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tendn" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Check_Login" nillable="true" type="tns:Check_Login" />
 </xs:schema>

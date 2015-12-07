@@ -13,9 +13,11 @@ namespace QLNS_Service
     [ServiceContract]
     public interface IQLNS_Service
     {
+        [OperationContract]
+        void myconnect();
         //-------------------------------------------------------NHÂN VIÊN-----------------------------------------//
         [OperationContract]
-        DataSet Load_NhanVien();
+        DataSet Load_NhanVien(string tenbang);
         [OperationContract]
         string Add_NhanVien(Cls_NhanVien nv);
         [OperationContract]
@@ -60,7 +62,7 @@ namespace QLNS_Service
         string Delete_CTNgoaiNgu(Cls_CTNgoaiNgu ctnn);
         //-------------------------------------------------------PHÒNG BAN-----------------------------------------//
         [OperationContract]
-        DataSet Load_PhongBan();
+        DataSet Load_PhongBan( string tenbang);
         [OperationContract]
         string Add_PhongBan(Cls_PhongBan pb);
         [OperationContract]
@@ -69,7 +71,7 @@ namespace QLNS_Service
         string Delete_PhongBan(Cls_PhongBan pb);
         //-------------------------------------------------------CHỨC VỤ-----------------------------------------//
         [OperationContract]
-        DataSet Load_ChucVu();
+        DataSet Load_ChucVu(string tenbang);
         [OperationContract]
         string Add_ChucVu(Cls_ChucVu cv);
         [OperationContract]
@@ -167,7 +169,9 @@ namespace QLNS_Service
         [OperationContract]
         string Delete_ChuyenCongTac(Cls_ChuyenCongTac cct);
         //-------------------------------------------------------ĐĂNG NHẬP-----------------------------------------//
+        /*
         [OperationContract]
-        DataSet ktDangNhap(Check_Login cl);
+        bool ktDangNhap(string user, string pass);
+         * */
     }
 }

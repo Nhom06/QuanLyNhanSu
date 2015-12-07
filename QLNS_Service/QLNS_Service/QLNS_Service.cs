@@ -16,14 +16,19 @@ namespace QLNS_Service
     {
         //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString);
         private string strConnection = ConfigurationManager.ConnectionStrings["Dbconnection"].ToString();
+        public SqlConnection cnn = new SqlConnection("Data Source=(local);Initial Catalog=DB_QLNS;Integrated Security=True");
+        public void myconnect()
+        {
+            cnn.Open();
+        }
         //-------------------------------------------------------NHÂN VIÊN-----------------------------------------//
-        public DataSet Load_NhanVien()
+        public DataSet Load_NhanVien(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_NhanVien", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -34,7 +39,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into Tb_NhanVien (MaNV,HoTen,GioiTinh,NgaySinh,SoCMND,NoiSinh,TonGiao,DanToc,MaPB,MaCV,DienThoai,HoKhau,NgayVaoLam,ChoOHienNay,SoBHYT,SoTheATM) values(@MANV,@HOTEN,@GIOITINH,@NGAYSINH,@SOCMND,@NOISINH,@TONGIAO,@DANTOC,@MAPB,@MACV,@DIENTHOAI,@HOKHAU,@NGAYVAOLAM,@CHOOHIENNAY,@SOBHYT,@SOTHEATM)", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy insert into Tb_NhanVien (MaNV,HoTen,GioiTinh,NgaySinh,SoCMND,NoiSinh,TonGiao,DanToc,MaPB,MaCV,DienThoai,HoKhau,NgayVaoLam,ChoOHienNay,SoBHYT,SoTheATM) values(@MANV,@HOTEN,@GIOITINH,@NGAYSINH,@SOCMND,@NOISINH,@TONGIAO,@DANTOC,@MAPB,@MACV,@DIENTHOAI,@HOKHAU,@NGAYVAOLAM,@CHOOHIENNAY,@SOBHYT,@SOTHEATM)", conn);
                 cmd.Parameters.AddWithValue("@MANV", nv.manv);
                 cmd.Parameters.AddWithValue("@HOTEN", nv.hoten);
                 cmd.Parameters.AddWithValue("@GIOITINH", nv.gioitinh);
@@ -461,13 +466,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------PHÒNG BAN-----------------------------------------//
-        public DataSet Load_PhongBan()
+        public DataSet Load_PhongBan(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_PhongBan", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang , conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -545,13 +550,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------CHỨC VỤ-----------------------------------------//
-        public DataSet Load_ChucVu()
+        public DataSet Load_ChucVu( string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_ChucVu", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -1474,22 +1479,5 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------ĐĂNG NHẬP-----------------------------------------//
-        public DataSet ktDangNhap(Check_Login cl)
-        {
-            DataSet ds;
-            string strMessage = string.Empty;
-            using (SqlConnection conn = new SqlConnection(strConnection))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("select * from Tb_NguoiDung where TenDN=@TENDN,MatKhau=@MATKHAU", conn);
-                cmd.Parameters.AddWithValue("@TENDN", cl.tendn);
-                cmd.Parameters.AddWithValue("@MATKHAU", cl.matkhau);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                ds = new DataSet();
-                da.Fill(ds);
-                conn.Close();
-                return ds;
-            }
-        }
     }
 }

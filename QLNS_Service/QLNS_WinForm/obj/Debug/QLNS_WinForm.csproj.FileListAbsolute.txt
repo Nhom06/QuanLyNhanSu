@@ -7,3 +7,4 @@ E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QL
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.pdb
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.csprojResolveAssemblyReference.cache
 E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.frmMain.resources
+E:\Hoc Tap\WebService\GITHUB\QuanLyNhanSu\QLNS_Service\QLNS_WinForm\obj\Debug\QLNS_WinForm.frmLogin.resources

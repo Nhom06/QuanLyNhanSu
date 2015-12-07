@@ -8,6 +8,12 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/QLNS_Service" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IQLNS_Service_myconnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:myconnect" />
+  </wsdl:message>
+  <wsdl:message name="IQLNS_Service_myconnect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:myconnectResponse" />
+  </wsdl:message>
   <wsdl:message name="IQLNS_Service_Load_NhanVien_InputMessage">
     <wsdl:part name="parameters" element="tns:Load_NhanVien" />
   </wsdl:message>
@@ -416,13 +422,11 @@
   <wsdl:message name="IQLNS_Service_Delete_ChuyenCongTac_OutputMessage">
     <wsdl:part name="parameters" element="tns:Delete_ChuyenCongTacResponse" />
   </wsdl:message>
-  <wsdl:message name="IQLNS_Service_ktDangNhap_InputMessage">
-    <wsdl:part name="parameters" element="tns:ktDangNhap" />
-  </wsdl:message>
-  <wsdl:message name="IQLNS_Service_ktDangNhap_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ktDangNhapResponse" />
-  </wsdl:message>
   <wsdl:portType name="IQLNS_Service">
+    <wsdl:operation name="myconnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/myconnect" message="tns:IQLNS_Service_myconnect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/myconnectResponse" message="tns:IQLNS_Service_myconnect_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Load_NhanVien">
       <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Load_NhanVien" message="tns:IQLNS_Service_Load_NhanVien_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Load_NhanVienResponse" message="tns:IQLNS_Service_Load_NhanVien_OutputMessage" />
@@ -695,13 +699,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_ChuyenCongTac" message="tns:IQLNS_Service_Delete_ChuyenCongTac_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/Delete_ChuyenCongTacResponse" message="tns:IQLNS_Service_Delete_ChuyenCongTac_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ktDangNhap">
-      <wsdl:input wsaw:Action="http://tempuri.org/IQLNS_Service/ktDangNhap" message="tns:IQLNS_Service_ktDangNhap_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IQLNS_Service/ktDangNhapResponse" message="tns:IQLNS_Service_ktDangNhap_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IQLNS_Service" type="tns:IQLNS_Service">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="myconnect">
+      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/myconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Load_NhanVien">
       <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Load_NhanVien" style="document" />
       <wsdl:input>
@@ -1307,15 +1316,6 @@
     </wsdl:operation>
     <wsdl:operation name="Delete_ChuyenCongTac">
       <soap:operation soapAction="http://tempuri.org/IQLNS_Service/Delete_ChuyenCongTac" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ktDangNhap">
-      <soap:operation soapAction="http://tempuri.org/IQLNS_Service/ktDangNhap" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

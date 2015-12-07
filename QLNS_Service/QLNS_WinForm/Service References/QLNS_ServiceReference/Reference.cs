@@ -1818,76 +1818,21 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Check_Login", Namespace="http://schemas.datacontract.org/2004/07/QLNS_Service")]
-    [System.SerializableAttribute()]
-    public partial class Check_Login : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string matkhauField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tendnField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string matkhau {
-            get {
-                return this.matkhauField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.matkhauField, value) != true)) {
-                    this.matkhauField = value;
-                    this.RaisePropertyChanged("matkhau");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tendn {
-            get {
-                return this.tendnField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tendnField, value) != true)) {
-                    this.tendnField = value;
-                    this.RaisePropertyChanged("tendn");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QLNS_ServiceReference.IQLNS_Service")]
     public interface IQLNS_Service {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_NhanVien", ReplyAction="http://tempuri.org/IQLNS_Service/Load_NhanVienResponse")]
-        System.Data.DataSet Load_NhanVien();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/myconnect", ReplyAction="http://tempuri.org/IQLNS_Service/myconnectResponse")]
+        void myconnect();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/myconnect", ReplyAction="http://tempuri.org/IQLNS_Service/myconnectResponse")]
+        System.Threading.Tasks.Task myconnectAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_NhanVien", ReplyAction="http://tempuri.org/IQLNS_Service/Load_NhanVienResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_NhanVienAsync();
+        System.Data.DataSet Load_NhanVien(string tenbang);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_NhanVien", ReplyAction="http://tempuri.org/IQLNS_Service/Load_NhanVienResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_NhanVienAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_NhanVien", ReplyAction="http://tempuri.org/IQLNS_Service/Add_NhanVienResponse")]
         string Add_NhanVien(QLNS_WinForm.QLNS_ServiceReference.Cls_NhanVien nv);
@@ -2004,10 +1949,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_CTNgoaiNguAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_CTNgoaiNgu ctnn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_PhongBan", ReplyAction="http://tempuri.org/IQLNS_Service/Load_PhongBanResponse")]
-        System.Data.DataSet Load_PhongBan();
+        System.Data.DataSet Load_PhongBan(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_PhongBan", ReplyAction="http://tempuri.org/IQLNS_Service/Load_PhongBanResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_PhongBanAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_PhongBanAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_PhongBan", ReplyAction="http://tempuri.org/IQLNS_Service/Add_PhongBanResponse")]
         string Add_PhongBan(QLNS_WinForm.QLNS_ServiceReference.Cls_PhongBan pb);
@@ -2028,10 +1973,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_PhongBanAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_PhongBan pb);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_ChucVu", ReplyAction="http://tempuri.org/IQLNS_Service/Load_ChucVuResponse")]
-        System.Data.DataSet Load_ChucVu();
+        System.Data.DataSet Load_ChucVu(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_ChucVu", ReplyAction="http://tempuri.org/IQLNS_Service/Load_ChucVuResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_ChucVuAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_ChucVuAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_ChucVu", ReplyAction="http://tempuri.org/IQLNS_Service/Add_ChucVuResponse")]
         string Add_ChucVu(QLNS_WinForm.QLNS_ServiceReference.Cls_ChucVu cv);
@@ -2290,12 +2235,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Delete_ChuyenCongTac", ReplyAction="http://tempuri.org/IQLNS_Service/Delete_ChuyenCongTacResponse")]
         System.Threading.Tasks.Task<string> Delete_ChuyenCongTacAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_ChuyenCongTac cct);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/ktDangNhap", ReplyAction="http://tempuri.org/IQLNS_Service/ktDangNhapResponse")]
-        System.Data.DataSet ktDangNhap(QLNS_WinForm.QLNS_ServiceReference.Check_Login cl);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/ktDangNhap", ReplyAction="http://tempuri.org/IQLNS_Service/ktDangNhapResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> ktDangNhapAsync(QLNS_WinForm.QLNS_ServiceReference.Check_Login cl);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2325,12 +2264,20 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public System.Data.DataSet Load_NhanVien() {
-            return base.Channel.Load_NhanVien();
+        public void myconnect() {
+            base.Channel.myconnect();
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_NhanVienAsync() {
-            return base.Channel.Load_NhanVienAsync();
+        public System.Threading.Tasks.Task myconnectAsync() {
+            return base.Channel.myconnectAsync();
+        }
+        
+        public System.Data.DataSet Load_NhanVien(string tenbang) {
+            return base.Channel.Load_NhanVien(tenbang);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_NhanVienAsync(string tenbang) {
+            return base.Channel.Load_NhanVienAsync(tenbang);
         }
         
         public string Add_NhanVien(QLNS_WinForm.QLNS_ServiceReference.Cls_NhanVien nv) {
@@ -2485,12 +2432,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_CTNgoaiNguAsync(ctnn);
         }
         
-        public System.Data.DataSet Load_PhongBan() {
-            return base.Channel.Load_PhongBan();
+        public System.Data.DataSet Load_PhongBan(string tenbang) {
+            return base.Channel.Load_PhongBan(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_PhongBanAsync() {
-            return base.Channel.Load_PhongBanAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_PhongBanAsync(string tenbang) {
+            return base.Channel.Load_PhongBanAsync(tenbang);
         }
         
         public string Add_PhongBan(QLNS_WinForm.QLNS_ServiceReference.Cls_PhongBan pb) {
@@ -2517,12 +2464,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_PhongBanAsync(pb);
         }
         
-        public System.Data.DataSet Load_ChucVu() {
-            return base.Channel.Load_ChucVu();
+        public System.Data.DataSet Load_ChucVu(string tenbang) {
+            return base.Channel.Load_ChucVu(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_ChucVuAsync() {
-            return base.Channel.Load_ChucVuAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_ChucVuAsync(string tenbang) {
+            return base.Channel.Load_ChucVuAsync(tenbang);
         }
         
         public string Add_ChucVu(QLNS_WinForm.QLNS_ServiceReference.Cls_ChucVu cv) {
@@ -2867,14 +2814,6 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         
         public System.Threading.Tasks.Task<string> Delete_ChuyenCongTacAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_ChuyenCongTac cct) {
             return base.Channel.Delete_ChuyenCongTacAsync(cct);
-        }
-        
-        public System.Data.DataSet ktDangNhap(QLNS_WinForm.QLNS_ServiceReference.Check_Login cl) {
-            return base.Channel.ktDangNhap(cl);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> ktDangNhapAsync(QLNS_WinForm.QLNS_ServiceReference.Check_Login cl) {
-            return base.Channel.ktDangNhapAsync(cl);
         }
     }
 }

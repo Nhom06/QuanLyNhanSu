@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/QLNS_Service" />
-  <xs:element name="Load_NhanVien">
+  <xs:element name="myconnect">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="myconnectResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Load_NhanVien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_NhanVienResponse">
@@ -333,7 +345,9 @@
   </xs:element>
   <xs:element name="Load_PhongBan">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_PhongBanResponse">
@@ -399,7 +413,9 @@
   </xs:element>
   <xs:element name="Load_ChucVu">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_ChucVuResponse">
@@ -1120,32 +1136,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Delete_ChuyenCongTacResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ktDangNhap">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/QLNS_Service" minOccurs="0" name="cl" nillable="true" type="q52:Check_Login" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ktDangNhapResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ktDangNhapResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
