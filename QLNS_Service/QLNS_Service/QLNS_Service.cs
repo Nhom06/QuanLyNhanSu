@@ -76,7 +76,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("update Tb_NhanVien set HoTen=@HOTEN,GioiTinh=@GIOITINH,NgaySinh=@NGAYSINH,NoiSinh=@NOISINH,SoCMND=@SOCMND,TonGiao=@TONGIAO,DanToc=@DANTOC,MaPB=@MAPB,MaCV=@MACV,DienThoai=@DIENTHOAI,HoKhau=@HOKHAU,NgayVaoLam=@NGAYVAOLAM,ChoOHienNay=@CHOOHIENNAY,SoBHYT=@SOBHYT,SoTheATM=@SOTHEATM where MaNV=@MANV", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy update Tb_NhanVien set HoTen=@HOTEN,GioiTinh=@GIOITINH,NgaySinh=@NGAYSINH,NoiSinh=@NOISINH,SoCMND=@SOCMND,TonGiao=@TONGIAO,DanToc=@DANTOC,MaPB=@MAPB,MaCV=@MACV,DienThoai=@DIENTHOAI,HoKhau=@HOKHAU,NgayVaoLam=@NGAYVAOLAM,ChoOHienNay=@CHOOHIENNAY,SoBHYT=@SOBHYT,SoTheATM=@SOTHEATM where MaNV=@MANV", conn);
                 cmd.Parameters.AddWithValue("@MANV", nv.manv);
                 cmd.Parameters.AddWithValue("@HOTEN", nv.hoten);
                 cmd.Parameters.AddWithValue("@GIOITINH", nv.gioitinh);
