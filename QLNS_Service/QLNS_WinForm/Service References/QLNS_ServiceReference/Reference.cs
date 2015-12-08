@@ -50,10 +50,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         private string mapbField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ngaysinhField;
+        private System.DateTime ngaysinhField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ngayvaolamField;
+        private System.DateTime ngayvaolamField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string noisinhField;
@@ -198,12 +198,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ngaysinh {
+        public System.DateTime ngaysinh {
             get {
                 return this.ngaysinhField;
             }
             set {
-                if ((object.ReferenceEquals(this.ngaysinhField, value) != true)) {
+                if ((this.ngaysinhField.Equals(value) != true)) {
                     this.ngaysinhField = value;
                     this.RaisePropertyChanged("ngaysinh");
                 }
@@ -211,12 +211,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ngayvaolam {
+        public System.DateTime ngayvaolam {
             get {
                 return this.ngayvaolamField;
             }
             set {
-                if ((object.ReferenceEquals(this.ngayvaolamField, value) != true)) {
+                if ((this.ngayvaolamField.Equals(value) != true)) {
                     this.ngayvaolamField = value;
                     this.RaisePropertyChanged("ngayvaolam");
                 }
@@ -2021,10 +2021,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_ThaiSanAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_ThaiSan ts);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_HopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Load_HopDongResponse")]
-        System.Data.DataSet Load_HopDong();
+        System.Data.DataSet Load_HopDong(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_HopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Load_HopDongResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_HopDongAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_HopDongAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_HopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Add_HopDongResponse")]
         string Add_HopDong(QLNS_WinForm.QLNS_ServiceReference.Cls_HopDong hd);
@@ -2528,12 +2528,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_ThaiSanAsync(ts);
         }
         
-        public System.Data.DataSet Load_HopDong() {
-            return base.Channel.Load_HopDong();
+        public System.Data.DataSet Load_HopDong(string tenbang) {
+            return base.Channel.Load_HopDong(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_HopDongAsync() {
-            return base.Channel.Load_HopDongAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_HopDongAsync(string tenbang) {
+            return base.Channel.Load_HopDongAsync(tenbang);
         }
         
         public string Add_HopDong(QLNS_WinForm.QLNS_ServiceReference.Cls_HopDong hd) {

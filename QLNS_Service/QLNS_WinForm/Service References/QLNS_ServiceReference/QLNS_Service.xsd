@@ -11,8 +11,8 @@
       <xs:element minOccurs="0" name="macv" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="manv" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="mapb" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ngaysinh" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ngayvaolam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngaysinh" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ngayvaolam" type="xs:dateTime" />
       <xs:element minOccurs="0" name="noisinh" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="sobhyt" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="socmnd" nillable="true" type="xs:string" />

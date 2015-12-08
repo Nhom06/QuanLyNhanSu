@@ -718,13 +718,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------HỢP ĐỒNG-----------------------------------------//
-        public DataSet Load_HopDong()
+        public DataSet Load_HopDong(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_HopDong", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -760,7 +760,7 @@ namespace QLNS_Service
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("update Tb_HopDong set TenHD=@TENHD where MaLoaiHD=@MALOAIHD", conn);
                 cmd.Parameters.AddWithValue("@MALOAIHD", hd.maloaihd);
-                cmd.Parameters.AddWithValue("@TENHD", hd.maloaihd);
+                cmd.Parameters.AddWithValue("@TENHD", hd.tenhd);
 
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
@@ -815,14 +815,13 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into Tb_CTHopDong (SoHD,MaLoaiHD,MaNV,NgayBatDau,NgayKetThuc,LuongCB,MaCV) values(@SOHD,@MALOAIHD,@MANV,@NGAYBATDAU,@NGAYKETTHUC,@LUONGCB,@MACV)", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy insert into Tb_CTHopDong (SoHD,MaLoaiHD,MaNV,NgayBatDau,NgayKetThuc,LuongCB) values(@SOHD,@MALOAIHD,@MANV,@NGAYBATDAU,@NGAYKETTHUC,@LUONGCB)", conn);
                 cmd.Parameters.AddWithValue("@SOHD", cthd.sohd);
                 cmd.Parameters.AddWithValue("@MALOAIHD", cthd.maloaihd);
                 cmd.Parameters.AddWithValue("@MANV", cthd.manv);
                 cmd.Parameters.AddWithValue("@NGAYBATDAU", cthd.ngaybatdau);
                 cmd.Parameters.AddWithValue("@NGAYKETTHUC", cthd.ngayketthuc);
                 cmd.Parameters.AddWithValue("@LUONGCB", cthd.luongcb);
-                cmd.Parameters.AddWithValue("@MACV", cthd.macv);
 
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
@@ -843,7 +842,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("update Tb_CTHopDong set MaLoaiHD=@MALOAIHD,MaNV=@MANV,NgayBatDau=@NGAYBATDAU,NgayKetThuc=@NGAYKETTHUC,LuongCB=@LUONGCB,MaCV=@MACV where SoHD=@SOHD", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy update Tb_CTHopDong set MaLoaiHD=@MALOAIHD,MaNV=@MANV,NgayBatDau=@NGAYBATDAU,NgayKetThuc=@NGAYKETTHUC,LuongCB=@LUONGCB,MaCV=@MACV where SoHD=@SOHD", conn);
                 cmd.Parameters.AddWithValue("@SOHD", cthd.sohd);
                 cmd.Parameters.AddWithValue("@MALOAIHD", cthd.maloaihd);
                 cmd.Parameters.AddWithValue("@MANV", cthd.manv);

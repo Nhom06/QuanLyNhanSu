@@ -89,7 +89,7 @@ namespace QLNS_Service
         string Delete_ThaiSan(Cls_ThaiSan ts);
         //-------------------------------------------------------HỢP ĐỒNG-----------------------------------------//
         [OperationContract]
-        DataSet Load_HopDong();
+        DataSet Load_HopDong( string tenbang);
         [OperationContract]
         string Add_HopDong(Cls_HopDong hd);
         [OperationContract]
