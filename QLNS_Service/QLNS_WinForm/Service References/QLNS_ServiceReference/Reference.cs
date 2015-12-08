@@ -1853,10 +1853,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_NhanVienAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_NhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_TrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Load_TrinhDoResponse")]
-        System.Data.DataSet Load_TrinhDo();
+        System.Data.DataSet Load_TrinhDo(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_TrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Load_TrinhDoResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_TrinhDoAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_TrinhDoAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_TrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Add_TrinhDoResponse")]
         string Add_TrinhDo(QLNS_WinForm.QLNS_ServiceReference.Cls_TrinhDo td);
@@ -1877,10 +1877,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_TrinhDoAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_TrinhDo td);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_CTTrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Load_CTTrinhDoResponse")]
-        System.Data.DataSet Load_CTTrinhDo();
+        System.Data.DataSet Load_CTTrinhDo(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_CTTrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Load_CTTrinhDoResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_CTTrinhDoAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_CTTrinhDoAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_CTTrinhDo", ReplyAction="http://tempuri.org/IQLNS_Service/Add_CTTrinhDoResponse")]
         string Add_CTTrinhDo(QLNS_WinForm.QLNS_ServiceReference.Cls_CTTrinhDo cttd);
@@ -2045,10 +2045,10 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
         System.Threading.Tasks.Task<string> Delete_HopDongAsync(QLNS_WinForm.QLNS_ServiceReference.Cls_HopDong hd);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_CTHopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Load_CTHopDongResponse")]
-        System.Data.DataSet Load_CTHopDong();
+        System.Data.DataSet Load_CTHopDong(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Load_CTHopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Load_CTHopDongResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Load_CTHopDongAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> Load_CTHopDongAsync(string tenbang);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQLNS_Service/Add_CTHopDong", ReplyAction="http://tempuri.org/IQLNS_Service/Add_CTHopDongResponse")]
         string Add_CTHopDong(QLNS_WinForm.QLNS_ServiceReference.Cls_CTHopDong cthd);
@@ -2304,12 +2304,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_NhanVienAsync(nv);
         }
         
-        public System.Data.DataSet Load_TrinhDo() {
-            return base.Channel.Load_TrinhDo();
+        public System.Data.DataSet Load_TrinhDo(string tenbang) {
+            return base.Channel.Load_TrinhDo(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_TrinhDoAsync() {
-            return base.Channel.Load_TrinhDoAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_TrinhDoAsync(string tenbang) {
+            return base.Channel.Load_TrinhDoAsync(tenbang);
         }
         
         public string Add_TrinhDo(QLNS_WinForm.QLNS_ServiceReference.Cls_TrinhDo td) {
@@ -2336,12 +2336,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_TrinhDoAsync(td);
         }
         
-        public System.Data.DataSet Load_CTTrinhDo() {
-            return base.Channel.Load_CTTrinhDo();
+        public System.Data.DataSet Load_CTTrinhDo(string tenbang) {
+            return base.Channel.Load_CTTrinhDo(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_CTTrinhDoAsync() {
-            return base.Channel.Load_CTTrinhDoAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_CTTrinhDoAsync(string tenbang) {
+            return base.Channel.Load_CTTrinhDoAsync(tenbang);
         }
         
         public string Add_CTTrinhDo(QLNS_WinForm.QLNS_ServiceReference.Cls_CTTrinhDo cttd) {
@@ -2560,12 +2560,12 @@ namespace QLNS_WinForm.QLNS_ServiceReference {
             return base.Channel.Delete_HopDongAsync(hd);
         }
         
-        public System.Data.DataSet Load_CTHopDong() {
-            return base.Channel.Load_CTHopDong();
+        public System.Data.DataSet Load_CTHopDong(string tenbang) {
+            return base.Channel.Load_CTHopDong(tenbang);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> Load_CTHopDongAsync() {
-            return base.Channel.Load_CTHopDongAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> Load_CTHopDongAsync(string tenbang) {
+            return base.Channel.Load_CTHopDongAsync(tenbang);
         }
         
         public string Add_CTHopDong(QLNS_WinForm.QLNS_ServiceReference.Cls_CTHopDong cthd) {

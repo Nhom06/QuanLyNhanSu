@@ -81,7 +81,9 @@
   </xs:element>
   <xs:element name="Load_TrinhDo">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_TrinhDoResponse">
@@ -147,7 +149,9 @@
   </xs:element>
   <xs:element name="Load_CTTrinhDo">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_CTTrinhDoResponse">
@@ -615,7 +619,9 @@
   </xs:element>
   <xs:element name="Load_CTHopDong">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenbang" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Load_CTHopDongResponse">

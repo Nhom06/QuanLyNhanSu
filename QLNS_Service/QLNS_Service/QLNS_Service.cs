@@ -130,13 +130,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
-        public DataSet Load_TrinhDo()
+        public DataSet Load_TrinhDo(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_TrinhDo", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -210,13 +210,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------CHI TIẾT TRÌNH ĐỘ-----------------------------------------//
-        public DataSet Load_CTTrinhDo()
+        public DataSet Load_CTTrinhDo(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTTrinhDo", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -798,13 +798,13 @@ namespace QLNS_Service
             return strMessage;
         }
         //-------------------------------------------------------CHI TIẾT HỢP ĐỒNG-----------------------------------------//
-        public DataSet Load_CTHopDong()
+        public DataSet Load_CTHopDong(string tenbang)
         {
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from Tb_CTHopDong", conn);
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(tenbang);
+                SqlDataAdapter da = new SqlDataAdapter("select * from " + tenbang, conn);
                 da.Fill(ds);
                 return ds;
             }
@@ -842,14 +842,13 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("set dateformat dmy update Tb_CTHopDong set MaLoaiHD=@MALOAIHD,MaNV=@MANV,NgayBatDau=@NGAYBATDAU,NgayKetThuc=@NGAYKETTHUC,LuongCB=@LUONGCB,MaCV=@MACV where SoHD=@SOHD", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy update Tb_CTHopDong set MaLoaiHD=@MALOAIHD,MaNV=@MANV,NgayBatDau=@NGAYBATDAU,NgayKetThuc=@NGAYKETTHUC,LuongCB=@LUONGCB where SoHD=@SOHD", conn);
                 cmd.Parameters.AddWithValue("@SOHD", cthd.sohd);
                 cmd.Parameters.AddWithValue("@MALOAIHD", cthd.maloaihd);
                 cmd.Parameters.AddWithValue("@MANV", cthd.manv);
                 cmd.Parameters.AddWithValue("@NGAYBATDAU", cthd.ngaybatdau);
                 cmd.Parameters.AddWithValue("@NGAYKETTHUC", cthd.ngayketthuc);
                 cmd.Parameters.AddWithValue("@LUONGCB", cthd.luongcb);
-                cmd.Parameters.AddWithValue("@MACV", cthd.macv);
 
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)

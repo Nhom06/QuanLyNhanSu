@@ -26,7 +26,7 @@ namespace QLNS_Service
         string Delete_NhanVien(Cls_NhanVien nv);
         //-------------------------------------------------------TRÌNH ĐỘ-----------------------------------------//
         [OperationContract]
-        DataSet Load_TrinhDo();
+        DataSet Load_TrinhDo(string tenbang);
         [OperationContract]
         string Add_TrinhDo(Cls_TrinhDo td);
         [OperationContract]
@@ -35,7 +35,7 @@ namespace QLNS_Service
         string Delete_TrinhDo(Cls_TrinhDo td);
         //-------------------------------------------------------CT TRÌNH ĐỘ-----------------------------------------//
         [OperationContract]
-        DataSet Load_CTTrinhDo();
+        DataSet Load_CTTrinhDo(string tenbang);
         [OperationContract]
         string Add_CTTrinhDo(Cls_CTTrinhDo cttd);
         [OperationContract]
@@ -98,7 +98,7 @@ namespace QLNS_Service
         string Delete_HopDong(Cls_HopDong hd);
         //-------------------------------------------------------CHI TIẾT HỢP ĐỒNG-----------------------------------------//
         [OperationContract]
-        DataSet Load_CTHopDong();
+        DataSet Load_CTHopDong(string tenbang);
         [OperationContract]
         string Add_CTHopDong(Cls_CTHopDong cthd);
         [OperationContract]
