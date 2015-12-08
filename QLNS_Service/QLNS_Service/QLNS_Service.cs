@@ -227,7 +227,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into Tb_CTTrinhDo (MaCTTD,MaNV,MaTD,ChuyenMon,NgayCap,Truong) values(@MACTTD,@MANV,@MATD,@CHUYENMON,@NGAYCAP,@TRUONG)", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy insert into Tb_CTTrinhDo (MaCTTD,MaNV,MaTD,ChuyenMon,NgayCap,Truong) values(@MACTTD,@MANV,@MATD,@CHUYENMON,@NGAYCAP,@TRUONG)", conn);
                 cmd.Parameters.AddWithValue("@MACTTD", cttd.macttd);
                 cmd.Parameters.AddWithValue("@MANV", cttd.manv);
                 cmd.Parameters.AddWithValue("@MATD", cttd.matd);
@@ -254,7 +254,7 @@ namespace QLNS_Service
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("update Tb_CTTrinhDo set MaNV=@MANV,MaTD=@MATD,ChuyenMon=@CHUYENMON,NgayCap=@NGAYCAP,Truonh=@TRUONG where MaCTTD=@MACTTD", conn);
+                SqlCommand cmd = new SqlCommand("set dateformat dmy update Tb_CTTrinhDo set MaNV=@MANV,MaTD=@MATD,ChuyenMon=@CHUYENMON,NgayCap=@NGAYCAP,Truong=@TRUONG where MaCTTD=@MACTTD", conn);
                 cmd.Parameters.AddWithValue("@MACTTD", cttd.macttd);
                 cmd.Parameters.AddWithValue("@MANV", cttd.manv);
                 cmd.Parameters.AddWithValue("@MATD", cttd.matd);
